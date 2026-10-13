@@ -1,8 +1,8 @@
 def solution(arr, flag):
     answer = []
-    for i, bool in enumerate(flag):
+    for num, bool in zip(arr, flag):
         if bool:
-            answer.extend([arr[i]] * (arr[i] * 2))
+            answer.extend([num] * (num * 2))
         else:
-            answer = answer[:(len(answer) - arr[i])]
+            answer = answer[:(len(answer) - num)]
     return answer
