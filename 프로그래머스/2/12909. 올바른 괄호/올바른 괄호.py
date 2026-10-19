@@ -5,6 +5,7 @@ def solution(s):
             count += 1
         else:
             count -= 1
-            if count < 0:
-                return False
-    return count == 0
+    if count == 0:
+        return True
+    else:
+        return False
