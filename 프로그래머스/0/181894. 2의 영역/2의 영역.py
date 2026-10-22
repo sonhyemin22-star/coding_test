@@ -1,9 +1,5 @@
 def solution(arr):
     if 2 in arr:
-        x = []
-        for i in range(len(arr)):
-            if arr[i] == 2:
-                x.append(i)
-        return arr[x[0]:(x[-1] + 1)]
+        return arr[arr.index(2): (len(arr) - arr[::-1].index(2))]
     else:
         return [-1]
